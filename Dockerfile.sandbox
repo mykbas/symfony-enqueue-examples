@@ -1,0 +1,25 @@
+FROM formapro/nginx-php-fpm:latest-all-exts
+
+## libs
+RUN set -x && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends wget curl openssl ca-certificates nano netcat parallel supervisor htop
+
+RUN mkdir -p /mqs
+ADD . /mqs
+RUN export $(cat /mqs/symfony/app/config/.env | xargs)
+
+ADD ./docker/container/php/cli.ini /etc/php/7.1/cli/conf.d/1-sandbox_cli.ini
+ADD ./docker/shared/ /shared
+
+RUN curl --silent --show-error https://getcomposer.org/installer | php
+RUN curl -sS https://getcomposer.org/installer | \
+    php -- --install-dir=/usr/bin/ --filename=composer
+RUN export COMPOSER_PROCESS_TIMEOUT=2000
+RUN composer install
+
+#RUN chown -R www-data:www-data /dev/shm/var/cache/
+#RUN chown -R www-data:www-data /dev/shm/var/logs/
+
+COPY ./entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]

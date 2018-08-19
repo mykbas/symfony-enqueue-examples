@@ -1,0 +1,128 @@
+{
+    "name": "enqueue/message-queue-sandbox",
+    "license": "MIT",
+    "type": "project",
+    "autoload": {
+        "psr-4": { "": "src/" },
+        "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
+    },
+    "require": {
+        "php": ">=5.5.9",
+        "symfony/symfony": "^3",
+        "doctrine/orm": "^2.6@dev",
+        "doctrine/doctrine-bundle": "^1.6",
+        "doctrine/doctrine-cache-bundle": "^1.2",
+        "symfony/swiftmailer-bundle": "^2.3",
+        "symfony/monolog-bundle": "^2.8",
+        "symfony/polyfill-apcu": "^1.0",
+        "sensio/distribution-bundle": "^5.0",
+        "sensio/framework-extra-bundle": "^3.0.2",
+        "incenteev/composer-parameter-handler": "^2.0",
+        "enqueue/enqueue": "*@dev",
+        "enqueue/stomp": "*@dev",
+        "enqueue/amqp-ext": "*@dev",
+        "enqueue/amqp-tools": "*@dev",
+        "enqueue/enqueue-bundle": "*@dev",
+        "enqueue/job-queue": "*@dev",
+        "enqueue/test": "*@dev",
+        "enqueue/null": "*@dev",
+        "enqueue/elastica-bundle": "*@dev",
+        "friendsofsymfony/elastica-bundle": "^4",
+        "fzaninotto/faker": "^1.6",
+        "liip/imagine-bundle": "^2.0@dev",
+        "knplabs/gaufrette": "^0.3",
+        "knplabs/knp-gaufrette-bundle": "^0.4",
+        "php-amqplib/rabbitmq-bundle": "^1.12",
+        "ruflin/elastica": "3.2.3 as 2.99.0",
+        "pagerfanta/pagerfanta": "^1"
+    },
+    "require-dev": {
+        "sensio/generator-bundle": "^3.0",
+        "symfony/phpunit-bridge": "^3.0",
+        "phpunit/phpunit": "^5.4"
+    },
+    "scripts": {
+        "symfony-scripts": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+        ],
+        "post-install-cmd": [
+            "@symfony-scripts"
+        ],
+        "post-update-cmd": [
+            "@symfony-scripts"
+        ]
+    },
+    "config": {
+        "platform": {
+            "php": "7.1",
+            "ext-amqp": "1.7",
+            "ext-gearman": "1.1",
+            "ext-rdkafka": "3.3"
+        }
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-bin-dir": "bin",
+        "symfony-var-dir": "var",
+        "symfony-web-dir": "web",
+        "symfony-tests-dir": "tests",
+        "symfony-assets-install": "relative",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        },
+        "branch-alias": {
+            "dev-master": "3.1-dev"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../dev/pkg/amqp-tools"
+        },
+        {
+            "type": "path",
+            "url": "../dev/pkg/amqp-bunny"
+        },
+        {
+            "type": "path",
+            "url": "../dev/pkg/amqp-lib"
+        },
+        {
+            "type": "path",
+            "url": "../dev/pkg/amqp-ext"
+        },
+        {
+            "type": "path",
+            "url": "../dev/pkg/test"
+        },
+        {
+            "type": "path",
+            "url": "../dev/pkg/enqueue"
+        },
+        {
+            "type": "path",
+            "url": "../dev/pkg/null"
+        },
+        {
+            "type": "path",
+            "url": "../dev/pkg/stomp"
+        },
+        {
+            "type": "path",
+            "url": "../dev/pkg/amqp-ext"
+        },
+        {
+            "type": "path",
+            "url": "../dev/pkg/enqueue-bundle"
+        },
+        {
+            "type": "path",
+            "url": "../dev/pkg/job-queue"
+        }
+    ]
+}
