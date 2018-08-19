@@ -11,7 +11,7 @@ cd symfony-enqueue-examples
 git clone git@github.com:php-enqueue/enqueue-dev.git dev
 ./bin/sandbox -b
 ./bin/sandbox -u
-```
+1```
 
 ## Usage
 
