@@ -78,5 +78,3 @@ enqueue:
         traceable_producer: true
     async_events: false
     job: true
-
-services:
