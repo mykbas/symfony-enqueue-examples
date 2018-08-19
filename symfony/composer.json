@@ -19,22 +19,12 @@
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "^2.0",
         "enqueue/enqueue": "*@dev",
-        "enqueue/stomp": "*@dev",
         "enqueue/amqp-ext": "*@dev",
         "enqueue/amqp-tools": "*@dev",
         "enqueue/enqueue-bundle": "*@dev",
         "enqueue/job-queue": "*@dev",
         "enqueue/test": "*@dev",
-        "enqueue/null": "*@dev",
-        "enqueue/elastica-bundle": "*@dev",
-        "friendsofsymfony/elastica-bundle": "^4",
-        "fzaninotto/faker": "^1.6",
-        "liip/imagine-bundle": "^2.0@dev",
-        "knplabs/gaufrette": "^0.3",
-        "knplabs/knp-gaufrette-bundle": "^0.4",
-        "php-amqplib/rabbitmq-bundle": "^1.12",
-        "ruflin/elastica": "3.2.3 as 2.99.0",
-        "pagerfanta/pagerfanta": "^1"
+        "enqueue/null": "*@dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

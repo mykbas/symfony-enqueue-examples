@@ -9,10 +9,9 @@ containers.
 git clone https://github.com/vikbert/symfony-enqueue-examples.git
 cd symfony-enqueue-examples
 git clone git@github.com:php-enqueue/enqueue-dev.git dev
-git submodule init; git submodule update
 ./bin/sandbox -b
-cd symfony
-composer install
+./bin/sandbox -u
+./bin/sandbox -i
 ```
 
 ## Usage

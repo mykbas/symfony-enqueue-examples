@@ -79,3 +79,22 @@ exit
 composer
 ls vendor/
 exit
+ls -al
+ls -al vendor/
+ls composer.
+ls composer.json 
+ls vendor/
+composer install -n
+ps aux | grep php
+kill -9 12
+kill -9 11
+ps aux
+kill -9 13
+ps aux
+composer install -n
+exit
+composer 
+exit
+history
+bin/console enqueue:consume --setup-broker -vvv
+exit

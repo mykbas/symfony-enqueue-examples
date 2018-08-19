@@ -21,7 +21,6 @@ class IndexController extends Controller
         /** @var ProducerInterface $producer */
         $producer = $this->get('enqueue.producer');
 
-//        $producer->sendEvent(Topics::SEND_MAIL, 'ein email message');
         $producer->sendEvent(Topics::DO_RPC_CALLS, 'ein another cutoff message');
 
         return new JsonResponse('message pushed to queue');

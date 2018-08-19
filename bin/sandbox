@@ -10,6 +10,7 @@ while getopts "buse" OPTION; do
       ;;
     u)
       COMPOSE_PROJECT_NAME=mqs docker-compose up -d
+      COMPOSE_PROJECT_NAME=mqs docker exec -it mqs_sandbox_1 env TERM=xterm /bin/bash init.sh
       ;;
     s)
       COMPOSE_PROJECT_NAME=mqs docker-compose stop
@@ -17,7 +18,6 @@ while getopts "buse" OPTION; do
     e)
       COMPOSE_PROJECT_NAME=mqs docker exec -it mqs_sandbox_1 env TERM=xterm /bin/bash
       ;;
-
     \?)
       echo "Invalid option: -$OPTARG" >&2
       exit 1

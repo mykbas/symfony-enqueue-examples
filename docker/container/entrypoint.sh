@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
-curl -sS https://getcomposer.org/installer | \
-    php -- --install-dir=/usr/bin/ --filename=composer
-composer install -n
-chown -R www-data:www-data /dev/shm/var/cache/
-chown -R www-data:www-data /dev/shm/var/logs/
 
 export NGINX_WEB_ROOT=${NGINX_WEB_ROOT:-'/var/www/html'}
 export NGINX_PHP_FALLBACK=${NGINX_PHP_FALLBACK:-'/index.php'}

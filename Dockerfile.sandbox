@@ -18,8 +18,7 @@ RUN curl -sS https://getcomposer.org/installer | \
 RUN export COMPOSER_PROCESS_TIMEOUT=2000
 RUN composer install
 
-#RUN chown -R www-data:www-data /dev/shm/var/cache/
-#RUN chown -R www-data:www-data /dev/shm/var/logs/
+
 
 COPY ./entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]

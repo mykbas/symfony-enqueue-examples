@@ -16,11 +16,6 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
             new Enqueue\Bundle\EnqueueBundle(),
-            new Enqueue\ElasticaBundle\EnqueueElasticaBundle(),
-            new FOS\ElasticaBundle\FOSElasticaBundle(),
-            new Liip\ImagineBundle\LiipImagineBundle(),
-            new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
-            new OldSound\RabbitMqBundle\OldSoundRabbitMqBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
@@ -37,16 +32,16 @@ class AppKernel extends Kernel
     {
         return __DIR__;
     }
-
-    public function getCacheDir()
-    {
-        return '/dev/shm/var/cache/'.$this->getEnvironment();
-    }
-
-    public function getLogDir()
-    {
-        return '/dev/shm/var/logs';
-    }
+//
+//    public function getCacheDir()
+//    {
+//        return '/dev/shm/var/cache/'.$this->getEnvironment();
+//    }
+//
+//    public function getLogDir()
+//    {
+//        return '/dev/shm/var/logs';
+//    }
 
     public function registerContainerConfiguration(LoaderInterface $loader)
     {

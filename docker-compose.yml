@@ -10,7 +10,6 @@ services:
       - rabbitmq
     volumes:
       - ./docker/container/php/cli.ini:/etc/php/7.1/cli/conf.d/1-sandbox_cli.ini
-      - ./docker/container/entrypoint.sh:/entrypoint.sh
       - ./docker/shared/:/shared
       - ./:/mqs
     env_file: 'symfony/app/config/.env'
@@ -24,7 +23,6 @@ services:
     restart: 'always'
     ports:
       - "15673:15672"
-      - "15674:15674"
     environment:
       - RABBITMQ_DEFAULT_USER=guest
       - RABBITMQ_DEFAULT_PASS=guest
