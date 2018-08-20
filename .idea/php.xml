@@ -80,4 +80,5 @@
       <path value="$PROJECT_DIR$/symfony/vendor/enqueue/job-queue" />
     </include_path>
   </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
 </project>

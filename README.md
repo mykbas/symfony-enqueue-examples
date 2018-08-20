@@ -33,9 +33,12 @@ access the page to send the messages to `RabbitMQ`
 ```
 http://localhost
 ```
+![symfony](images/symfony.png)
+
 
 access the admin UI of `RabbitMQ`
 
 ```
 http://localhost:15673/#/queues
 ```
+![rabbitmq ](images/rabbitmq.png)
