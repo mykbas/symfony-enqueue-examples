@@ -42,3 +42,13 @@ access the admin UI of `RabbitMQ`
 http://localhost:15673/#/queues
 ```
 ![rabbitmq ](images/rabbitmq.png)
+
+## Play with examples
+
+Step 01: `./bin/sandbox -u`
+Step 02: go to `http://localhost` to push the message to queue
+Step 03: go to `http://localhost:15673/#/queues` to check the message queues.
+Step 04: if no queues found on rabbitMQ, then `./bin/sandbox -e` to enter the container
+Step 05: start the consumer bin/console enqueue:consume --setup-broker -vvv`
+
+

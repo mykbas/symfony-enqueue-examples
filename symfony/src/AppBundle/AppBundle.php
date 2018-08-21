@@ -11,6 +11,6 @@ class AppBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {
-        $container->addCompilerPass(AddTopicMetaPass::create()->add(Topics::SAY_HELLO));
+//        $container->addCompilerPass(AddTopicMetaPass::create()->add(Topics::SAY_HELLO));
     }
 }

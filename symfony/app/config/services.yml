@@ -5,6 +5,7 @@ parameters:
 
 services:
   app.async.email_processor:
+    public: true
     class: 'AppBundle\Async\EmailProcessor'
     tags:
         - { name: 'enqueue.client.processor' }

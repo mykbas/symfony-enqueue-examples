@@ -71,10 +71,10 @@ enqueue:
             qos_prefetch_count: 10
     client:
         prefix: 'mqs'
-        app_name: 'enqueue'
+        app_name: 'symfony'
         router_topic: 'router'
         router_queue: 'router'
-        default_processor_queue: 'default'
+        default_processor_queue: 'router'
         traceable_producer: true
     async_events: false
     job: true

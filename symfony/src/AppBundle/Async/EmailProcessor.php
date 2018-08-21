@@ -22,7 +22,7 @@ class EmailProcessor implements PsrProcessor, TopicSubscriberInterface
     public static function getSubscribedTopics()
     {
         return [
-            Topics::SEND_MAIL => ['queueName' => 'mailingqueue'],
+            Topics::MAILING => ['queueName' => 'mailing'],
         ];
     }
 }
